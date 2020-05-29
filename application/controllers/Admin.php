@@ -90,6 +90,7 @@ class Admin extends CI_Controller
     {
         $this->load->model('tgl_model');
         $data['data_print'] = $this->tgl_model->gettgl($id)->row_array();
+        $this->load->helper('tgl_indo_helper');
 
         // $data['print'] = $this->db->get_where('data_pelapor')->row_array();
         // $nama = $this->db->get_where('data_pelapor', ['nama']);

@@ -163,8 +163,7 @@
     <br><br>
 
 
-    <p align="Right"><?php $tgl = $data_print['tanggal'];
-                      echo date("l, d M Y", strtotime($tgl)) ?></p><br><br><br><br>
+    <p align="Right"> <?php echo tgl_indonesia($data_print['tanggal']) ?></p><br><br><br><br>
     <!-- <p align="Right">_______________________________</p> -->
   </div>
 
