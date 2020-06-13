@@ -21,8 +21,18 @@
 </footer>
 
 <script src="<?php echo base_url('assets/user/') ?>js/jquery-1.11.1.js"></script>
-
 <script src="<?php echo base_url('assets/user/') ?>js/bootstrap.js"></script>
+
+<script src="<?php echo base_url('assets/admin/') ?>js/jquery.2.1.1.min.js"></script>
+<script src="<?php echo base_url('assets/admin/') ?>js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url('assets/admin/') ?>js/bootstrap.min.js"></script>
+<script src="<?php echo base_url('assets/admin/') ?>js/jquery.dataTables.bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#dynamic-table').DataTable();
+    });
+</script>
 
 </body>
 

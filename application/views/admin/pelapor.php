@@ -20,12 +20,25 @@
 
                     <div class="alert alert-block alert-info">
                         <h3 class="header smaller lighter blue">Data Pelapor</h3>
+                        <h4 class="pink">
+                            <?php if (validation_errors()) : ?>
+                                <div class="alert alert-danger" role="alert">
+                                    <?php echo validation_errors(); ?>
+                                </div>
+                            <?php endif ?>
+
+                            <?php echo $this->session->flashdata('message'); ?>
+                            <i class="ace-icon fa fa-hand-o-right green"></i>
+                            <a href="#modal-form" role="button" class="btn btn-app btn-pink btn-sm" data-toggle="modal"> Tambah</a>
+
+                        </h4>
                         <div class="clearfix">
                             <div class="pull-right tableTools-container"></div>
                         </div>
                         <div class="table-header">
                             Kumpulan Data pelapor
                         </div>
+
                         <div>
                             <table id="dynamic-table" class="table table-striped table-bordered table-hover">
                                 <thead>
@@ -33,12 +46,9 @@
                                     <tr>
                                         <th scope="row">No</th>
                                         <th scope="row">Nama lengkap</th>
-                                        <!-- <th>Jenis Kelamin</th> -->
                                         <th scope="row">Bagian/Unit</th>
                                         <th scope="row">Perihal</th>
                                         <th scope="row">Keterangan Masalah</th>
-                                        <!-- <th>Isi Pengaduan</th> -->
-                                        <!-- <th>Tanggal Pengaduan</th> -->
                                         <th scope="row">Aksi</th>
                                     </tr>
                                 </thead>
@@ -77,7 +87,7 @@
 
                 </div>
                 <div id="modal-form" class="modal" tabindex="-1">
-                    <form method="post" action="./controller/pelapor/simpan.php" enctype="multipart/form-data">
+                    <form method="post" action="<?php echo base_url('admin/pelapor'); ?>" enctype="multipart/form-data">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -91,8 +101,8 @@
                                             <div class="form-group">
                                                 <select class="form-control" name="nama_pelapor" id="nama_pelapor">
                                                     <option value=""> pilih nama pelapor</option>
-                                                    <?php foreach ($nama as $n) : ?>
-                                                        <option value="nama_pelapor"><?php echo $n['nama']; ?></option>
+                                                    <?php foreach ($menu as $n) : ?>
+                                                        <option value="<?php echo $n['nama']; ?>"><?php echo $n['nama']; ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>
@@ -108,7 +118,7 @@
                                                 <label for="form-field-select-3">Status:</label>
                                                 <div>
                                                     <select class="form-control" name="status" id="status">
-                                                        <option value="">-pilih- </option>
+                                                        <option value="">-pilih-</option>
                                                         <option value="sedang ditangani">sedang ditangani</option>
                                                         <option value="selesai">selesai </option>
                                                     </select>

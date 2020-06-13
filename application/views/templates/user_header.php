@@ -9,50 +9,16 @@
 
     <title>Web Pengaduan Layanan Online</title>
 
-    <link href="<?php echo base_url('assets/user/') ?>css/bootstrap.css" rel="stylesheet" />
-
     <link href="<?php echo base_url('assets/user/') ?>css/font-awesome.css" rel="stylesheet" />
-
     <link href="<?php echo base_url('assets/user/') ?>css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>fonts/fonts.googleapis.com.css" />
+    <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
 
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <strong>Email: </strong>jheprogrammer@gmail.com
-                    &nbsp;&nbsp;
-                    <strong>Support: </strong>+6281364456585
-                </div>
-
-            </div>
-        </div>
-    </header>
-
-    <div class="navbar navbar-inverse set-radius-zero">
-        <div class="container">
-            <div class="navbar-header">
-
-
-
-                <img style="padding-bottom: 5%" src="<?php echo base_url('assets/user/') ?>img/pipsmg.png" />
-
-
-            </div>
-            <div class="navbar-header">
-
-
-
-                <CENTER>
-                    <h1>WEB PENGADUAN LAYANAN<br>SAMPAIKAN LAPORAN ANDA LANGSUNG</h1><br>
-                    <h2>Jl. Singosari Raya No.2A - Jawa Tengah 50242</h2>
-                </CENTER>
-            </div>
-        </div>
-    </div>
-
     <section class="menu-section navbar-fixed-top">
         <div class="container">
             <div class="row">
@@ -79,6 +45,21 @@
             </div>
         </div>
     </section>
+    <div style="padding-top:40px;" class="navbar navbar-inverse set-radius-zero">
+        <div class="container">
+            <div class="row">
+                <div style="justify-content: center;" class="col-lg-2">
+
+                    <img style="padding-bottom: 5%;" src="<?php echo base_url('assets/user/') ?>img/pipsmg.png" />
+                </div>
+                <div style="justify-content: center;" class="col-md-8 text-center">
+                    <h1>WEB PENGADUAN LAYANAN<br>SAMPAIKAN LAPORAN ANDA LANGSUNG</h1><br>
+                    <h2>Jl. Singosari Raya No.2A - Jawa Tengah 50242</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="content-wrapper">
         <div class="container">

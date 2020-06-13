@@ -11,12 +11,8 @@
 
     <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/bootstrap.min.css" />
     <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>font-awesome/4.2.0/css/font-awesome.min.css" />
-
     <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>fonts/fonts.googleapis.com.css" />
-
     <link rel="stylesheet" href="<?php echo base_url('assets/admin/'); ?>css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
-
-
     <script src="<?php echo base_url('assets/admin/'); ?>js/ace-extra.min.js"></script>
 
 </head>
@@ -66,7 +62,12 @@
                         </a>
 
                         <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-
+                            <li>
+                                <a href="<?php echo base_url('user') ?>">
+                                    <i class="ace-icon fa fa-user"></i>
+                                    USER
+                                </a>
+                            </li>
 
 
 
@@ -115,17 +116,7 @@
                             } ?>">
                     <a href="<?php echo base_url('admin/pelapor'); ?>">
                         <i class="menu-icon fa fa-list-alt"></i>
-                        <span class="menu-text"> Data pelapor </span>
-                    </a>
-                    <b class="arrow"></b>
-                </li>
-
-                <li class="<?php if ($this->uri->segment(2) == "informasi") {
-                                echo "active";
-                            } ?>">
-                    <a href="<?php echo base_url('admin/informasi') ?>">
-                        <i class="menu-icon fa fa-list-alt"></i>
-                        <span class="menu-text"> Data Informasi </span>
+                        <span class="menu-text"> Data Aduan </span>
                     </a>
                     <b class="arrow"></b>
                 </li>

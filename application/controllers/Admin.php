@@ -28,23 +28,7 @@ class Admin extends CI_Controller
     {
         $data['user'] = $this->db->get_where('user', ['username' =>
         $this->session->userdata('username')])->row_array();
-        // $this->load->model('tgl_model');
-        // $data['menu'] = $this->tgl_model->gettgl()->result_array();
         $data['menu'] = $this->db->get_where('data_pelapor')->result_array();
-
-
-        $this->load->view('templates/admin_header', $data);
-        $this->load->view('admin/pelapor', $data);
-        $this->load->view('templates/admin_footer');
-    }
-
-    public function informasi()
-    {
-
-        $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
-        $data['menu'] = $this->db->get_where('informasi')->result_array();
-        $data['nama'] = $this->db->get_where('data_pelapor')->result_array();
 
 
         $this->form_validation->set_rules('nama_pelapor', '"nama"', 'required');
@@ -55,7 +39,7 @@ class Admin extends CI_Controller
 
 
             $this->load->view('templates/admin_header', $data);
-            $this->load->view('admin/data_informasi', $data);
+            $this->load->view('admin/pelapor', $data);
             $this->load->view('templates/admin_footer');
         } else {
             $data = [
@@ -67,8 +51,8 @@ class Admin extends CI_Controller
             ];
             $this->db->insert('informasi', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-			congratuation, your data was inputted! </div>');
-            redirect('admin/informasi');
+			informasi aduan <?php echo telah ditambahkan </div>');
+            redirect('admin/pelapor');
         }
     }
 

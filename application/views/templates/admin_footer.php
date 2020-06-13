@@ -38,6 +38,7 @@
 <script src="<?php echo base_url('assets/admin/') ?>js/jquery.flot.resize.min.js"></script>
 
 <script src="<?php echo base_url('assets/admin/') ?>js/jquery.dataTables.bootstrap.min.js"></script>
+
 <script src="<?php echo base_url('assets/admin/') ?>js/dataTables.tableTools.min.js"></script>
 <script src="<?php echo base_url('assets/admin/') ?>js/dataTables.colVis.min.js"></script>
 <!-- ace scripts -->
