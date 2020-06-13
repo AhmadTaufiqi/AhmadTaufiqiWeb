@@ -48,8 +48,6 @@
                         <span class="bigger-110">Login</span>
                       </button>
                     </div>
-                    <div class="space-4"></div>
-                    <a class="small" href="<?php echo base_url('auth/register') ?>">Buat akun baru!</a>
                   </form>
 
 
